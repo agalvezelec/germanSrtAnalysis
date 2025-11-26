@@ -123,7 +123,7 @@ Dark.S01E01.combined.html / .md (All categories in one sequential table)
 
 ## Challenges & Solutions
 
-Most of this project and documentation was vibed coded with a LLM (Gemini 3 Pro). After a while experimenting with several spacy-based scripts I decided to unify the morphological analysis in a big script. 
+Most of this project and documentation was coded by a LLM (Gemini Pro). After a while experimenting with several spacy-based scripts I decided to unify the morphological analysis in a big script. 
 
 I did not included prepositions and conjunctions, I think that would be an overkill for learning. A 20 minute video already generates huge tables. The cognitive load is already too high. 
 

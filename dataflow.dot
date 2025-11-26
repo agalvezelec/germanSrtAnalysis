@@ -1,0 +1,45 @@
+digraph {
+  rankdir=LR;
+  compound=true;
+  node [fontname="Arial", fontsize=11];
+  
+  // Nodo de entrada
+  O [label="Video", style=filled, fillcolor="#f5f5f5", shape=box];
+  
+  // Cluster de procesamiento
+  subgraph cluster_procesamiento {
+    label="Audio Processing Pipeline";
+    style="rounded,filled";
+    fillcolor="#f8f9fa";
+    color="#495057";
+    fontname="Arial";
+    
+    FF [label="ffmpeg\n(Audio Extraction)", shape=box, style=filled, fillcolor="#e9ecef"];
+    A [label="whisper.cpp\n(Speech-to-Text)", shape=box, style=filled, fillcolor="#e9ecef"];
+    B [label="script.py\n(Text Processing)", shape=box, style=filled, fillcolor="#e9ecef"];
+    
+    // Conexiones dentro del cluster
+    FF -> A [label=".wav"];
+    A -> B [label=".srt"];
+  }
+  
+  // Cluster de categorías
+  subgraph cluster_categorias {
+    label="Word Classification";
+    style="rounded,filled";
+    fillcolor="#f8f9fa";
+    color="#495057";
+    fontname="Arial";
+    
+    D [label="Nouns", style=filled, fillcolor="#dee2e6"];
+    E [label="Adverbs", style=filled, fillcolor="#dee2e6"]; 
+    F [label="Verbs", style=filled, fillcolor="#dee2e6"];
+    G [label="Adjectives", style=filled, fillcolor="#dee2e6"];
+  }
+  
+  // Conexión del video al procesamiento
+  O -> FF [label=".mp4"];
+  
+  // Conexión entre clusters
+  B -> D [label=".md .html", lhead="cluster_categorias", ltail="cluster_procesamiento"];
+}

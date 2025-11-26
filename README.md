@@ -87,19 +87,19 @@ Direct Python Usage
 
 Ensure your virtual environment is active:
 
+```
 source .venv/bin/activate
 python germanSrtAnalysis.py /path/to/your/movie.srt
-
+```
 
 Global Command (Optional)
 
-You can use the provided germanSrtAnalysis.sh wrapper to run the tool from anywhere without manually activating the environment every time.
+You can use the provided `germanSrtAnalysis.sh` wrapper to run the tool from anywhere without manually activating the environment every time.
 
-Edit germanSrtAnalysis.sh and set PROJECT_DIR to your installation path.
+Edit `germanSrtAnalysis.sh` and set `PROJECT_DIR` to your installation path.
 
-Make it executable: chmod +x germanSrtAnalysis.sh
+Make it executable: `chmod +x germanSrtAnalysis.sh`
 
-(Optional) Symlink it to your bin: sudo ln -s $(pwd)/germanSrtAnalysis.sh /usr/local/bin/german-analyze
 
 
 ## Use case

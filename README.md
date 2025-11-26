@@ -10,9 +10,9 @@ It processes subtitle streams to extract Nouns, Verbs, Adjectives, and Adverbs, 
 
 - Contextual Analysis: Analyzes words within their original sentences to preserve meaning and grammatical context.
 
-- SRT Parsing: Custom regex logic extracts accurate start timestamps and cleans HTML tags (like <i>) from raw subtitle data.
+- SRT Parsing: Custom regex logic extracts accurate start timestamps and cleans HTML tags from raw subtitle data.
 
-- Dual Output System: Automatically generates an Analyse/ folder containing 10 reports per video:
+- Dual Output System: Automatically generates an `Analyse` folder containing 10 reports per video:
 
 - 5 HTML Reports: Interactive tables with CSS styling and context highlighting.
 
@@ -22,7 +22,7 @@ It processes subtitle streams to extract Nouns, Verbs, Adjectives, and Adverbs, 
 
 - Smart Linking: Words link directly to Verbformen.es for conjugation/declension. The tool smartly links the original inflected form (e.g., "ging") rather than the lemma ("gehen") for better dictionary results.
 
-- Video Integration: Timestamps link to http://localhost:8080/?time=..., allowing integration with local video players.
+- Video Integration: Timestamps link to `http://localhost:8080/?time=...`, allowing integration with local video players.
 
 - Context Highlighting: Detected words are highlighted directly within the sentence context.
 
@@ -30,7 +30,7 @@ It processes subtitle streams to extract Nouns, Verbs, Adjectives, and Adverbs, 
 
 * Handles German noun articles (e.g., outputs der Mann instead of just Mann).
 
-Uses the de_core_news_lg model for vector-based accuracy on complex forms like imperatives.
+Uses the `de_core_news_lg model` for vector-based accuracy on complex forms like imperatives.
 
 #  Tech Stack
 

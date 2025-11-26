@@ -24,9 +24,11 @@ It processes subtitle streams to extract Nouns, Verbs, Adjectives, and Adverbs, 
 
 - Video Integration: Timestamps link to http://localhost:8080/?time=..., allowing integration with local video players.
 
-Context Highlighting: Detected words are highlighted (<strong>) directly within the sentence context.
+- Context Highlighting: Detected words are highlighted directly within the sentence context.
 
-Advanced Lemmatization: * Handles German noun articles (e.g., outputs der Mann instead of just Mann).
+ - Lemmatization: 
+
+* Handles German noun articles (e.g., outputs der Mann instead of just Mann).
 
 Uses the de_core_news_lg model for vector-based accuracy on complex forms like imperatives.
 
@@ -34,27 +36,24 @@ Uses the de_core_news_lg model for vector-based accuracy on complex forms like i
 
 Python 3
 
-spaCy: Industrial-strength NLP engine (using the Large German model).
+- spaCy: Industrial-strength NLP engine (using the Large German model).
+- Regex: For parsing non-standardized text formats (SRT).
+- HTML/CSS: For generating frontend reports programmatically.
 
-Regex: For parsing non-standardized text formats (SRT).
-
-HTML/CSS: For generating frontend reports programmatically.
-
-📦 Installation
+# Installation
 
 Prerequisites
 
-Python 3.8+
+- Python 3.8+
+- A Linux/Unix environment (recommended).
 
-A Linux/Unix environment (recommended).
-
-Setup
+## Setup
 
 Clone the repository:
 
 ```bash
-git clone [https://github.com/yourusername/german-srt-analyzer.git](https://github.com/yourusername/german-srt-analyzer.git)
-cd german-srt-analyzer
+git clone https://github.com/agalvezelec/germanSrtAnalysis
+cd germanSrtAnalysis
 ```
 
 
@@ -101,6 +100,12 @@ Edit germanSrtAnalysis.sh and set PROJECT_DIR to your installation path.
 Make it executable: chmod +x germanSrtAnalysis.sh
 
 (Optional) Symlink it to your bin: sudo ln -s $(pwd)/germanSrtAnalysis.sh /usr/local/bin/german-analyze
+
+
+## Use case
+Integration with whisper.cpp:
+
+![](dataflow.jpg)
 
 ## Output Structure
 
